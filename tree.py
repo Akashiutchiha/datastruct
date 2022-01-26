@@ -28,6 +28,6 @@ node2.left = node3
 node2.right = node4
 node3.left = node5
 node3.right = node6
-print('All of these values in nodes give 20')
+print('All of these values in nodes give-->>')
 print(sum_values(node2))
 
