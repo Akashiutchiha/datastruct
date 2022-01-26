@@ -34,9 +34,13 @@ class Stacks():
             return -1
         else :
             return self.container[self.top]
-    def snap(self):
+    def display(self):
         print(self.container)
 
 
-s1 = Stacks()
-s1.push()
+
+s1 = Stacks(10)
+s1.push(45)
+s1.push(1)
+print(s1.container)
+
