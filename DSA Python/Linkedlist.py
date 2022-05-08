@@ -34,7 +34,7 @@ class Linkedlist:
                 return key
             else:
                 current = current.next_node 
-        return None       
+        return 'Not found'    
 
 #This will be used for displaying the linkedlist created
     def __repr__(self):
@@ -48,4 +48,6 @@ class Linkedlist:
             else:
                 nodes.append("[%s]" % current.data)   
             current = current.next_node
-        return "->".join(nodes)             
+        return "->".join(nodes)  
+
+               
