@@ -1,33 +1,8 @@
-class Node:
-    def __init__(self, data): 
+class BinTree():
+    def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
-
-
-def sum_values(root):
-    if root==None:
-        return 0
-    return root.data + sum_values(root.left)+sum_values(root.right)
-
-
-#our example tree looks like
-#         2
-#        / \
-#       3   4
-#      / \    
-#     5   6     
-
-node2 = Node(2)
-node3 = Node(3)
-node4 = Node(4)
-node5 = Node(5)
-node6 = Node(6)
-
-node2.left = node3
-node2.right = node4
-node3.left = node5
-node3.right = node6
-print('All of these values in nodes give-->>')
-print(sum_values(node2))
-
+    def preorder(self):
+        list = []
+        list.append(self.data)
