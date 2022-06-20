@@ -1,14 +1,14 @@
+from audioop import add
+
+
 class Node:
     data = None
     next_node = None
     def __init__(self, data):
         self.data = data
 
-    def __repr__(self) -> str:
-        return "<Node data: %s>" % self.data  
 
 class Linkedlist:
-
     def __init__(self):
         self.head = None  
     def is_empty(self):
@@ -36,16 +36,21 @@ class Linkedlist:
                 current = current.next_node 
         return None       
 
-#This will be used for displaying the linkedlist created
-    def __repr__(self):
-        nodes = []
-        current = self.head
-        while(current):
-            if current == self.head:
-                nodes.append("[head > %s]" % current.data)
-            elif current.next_node == None:
-                nodes.append('[Tail > %s]' % current.data)
-            else:
-                nodes.append("[%s]" % current.data)   
-            current = current.next_node
-        return "->".join(nodes)             
+
+    def display(self):
+        curNode = self.head
+        while curNode is not None :
+            print(f'{curNode.data} -> ' )
+            curNode = curNode.next_node
+
+Info = Linkedlist()
+road = (input('Type the information concerning the road-> ')).split(',')
+# ici toutes les information doivent etre separer par une vigurle comme ceci,
+# lundi, 7:AM, 9min, 250frs, pointA, pointB
+
+Info.add(road)
+Info.display()
+print(type(road))
+
+
+        
